@@ -1,0 +1,12 @@
+site_title: "redesigned-funicular"
+author: "wakej"
+meta_description: "redesigned-funicular — UI redesign project by wakej"
+logo_text: "redesigned-funicular"
+hero_title: "Make the funicular modern."
+tagline: "A redesign project: rebuilt UI, improved accessibility, and updated assets."
+about: "redesigned-funicular is a UI redesign project by wakej focusing on clarity, accessibility, and performance."
+contact_email: "wakej@users.noreply.github.com"
+social:
+  github: "https://github.com/wakej"
+cta_primary: "#contact"
+cta_secondary: "#features"

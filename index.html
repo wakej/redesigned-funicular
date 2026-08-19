@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Personal site for redesigned-funicular." />
+  <title>redesigned-funicular · Home</title>
+
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="logo" href="#" aria-label="Homepage">redesigned-funicular</a>
+
+      <button id="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle navigation">
+        ☰
+      </button>
+
+      <nav id="primary-nav" class="primary-nav" role="navigation" aria-label="Primary">
+        <ul>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><button id="theme-toggle" aria-pressed="false">Toggle theme</button></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="container hero-inner">
+        <h1 id="hero-title">Make the funicular modern.</h1>
+        <p class="tagline">A redesign project: rebuilt UI, improved accessibility, and updated assets.</p>
+        <p>
+          <a class="btn primary" href="#contact">Get in touch</a>
+          <a class="btn ghost" href="#features">See features</a>
+        </p>
+      </div>
+    </section>
+
+    <section id="features" class="container features" aria-labelledby="features-title">
+      <h2 id="features-title">Highlights</h2>
+      <div class="grid features-grid">
+        <article class="card">
+          <h3>Modern UI</h3>
+          <p>Clean, responsive layouts that scale across devices.</p>
+        </article>
+        <article class="card">
+          <h3>Accessible</h3>
+          <p>Keyboard-friendly navigation and semantic markup.</p>
+        </article>
+        <article class="card">
+          <h3>Lightweight</h3>
+          <p>Minimal JS and optimized CSS for fast load times.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" class="container about" aria-labelledby="about-title">
+      <h2 id="about-title">About this project</h2>
+      <p>redesigned-funicular is a UI redesign project by wakej focusing on clarity, accessibility, and performance.</p>
+    </section>
+
+    <section id="contact" class="container contact" aria-labelledby="contact-title">
+      <h2 id="contact-title">Contact</h2>
+      <form id="contact-form" novalidate>
+        <div class="form-row">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" required />
+        </div>
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required />
+        </div>
+        <div class="form-row">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+        <div class="form-row">
+          <button class="btn primary" type="submit">Send message</button>
+          <span id="form-status" role="status" aria-live="polite"></span>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <p>© <span id="year"></span> wakej. <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+      <p class="socials">
+        <a href="https://github.com/wakej" aria-label="GitHub">GitHub</a>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
