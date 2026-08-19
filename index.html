@@ -7,6 +7,8 @@
   <title>redesigned-funicular · Home</title>
 
   <link rel="stylesheet" href="styles.css" />
+  <!-- reCAPTCHA v2 (checkbox) script. Replace the site key in the form with your site key. -->
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   <script defer src="script.js"></script>
 </head>
 <body>
@@ -66,7 +68,18 @@
 
     <section id="contact" class="container contact" aria-labelledby="contact-title">
       <h2 id="contact-title">Contact</h2>
-      <form id="contact-form" novalidate>
+      <!-- Wired to Formspree: https://formspree.io/f/moeapzek -->
+      <!-- Honeypot field (name="website") is included and hidden from users; bots often fill it.
+           reCAPTCHA v2 checkbox is included below — replace data-sitekey with your Google reCAPTCHA site key. -->
+      <form id="contact-form" action="https://formspree.io/f/moeapzek" method="POST" novalidate>
+        <input type="hidden" name="_subject" value="Website contact from redesigned-funicular">
+
+        <!-- Honeypot (hidden) -->
+        <div class="hp-field" aria-hidden="true">
+          <label for="hp_website" class="visually-hidden">Leave this field blank</label>
+          <input id="hp_website" name="website" type="text" autocomplete="off" tabindex="-1" />
+        </div>
+
         <div class="form-row">
           <label for="name">Name</label>
           <input id="name" name="name" type="text" required />
@@ -79,6 +92,12 @@
           <label for="message">Message</label>
           <textarea id="message" name="message" rows="5" required></textarea>
         </div>
+
+        <!-- reCAPTCHA widget: replace YOUR_RECAPTCHA_SITE_KEY with your site key -->
+        <div class="form-row">
+          <div class="g-recaptcha" data-sitekey="YOUR_RECAPTCHA_SITE_KEY"></div>
+        </div>
+
         <div class="form-row">
           <button class="btn primary" type="submit">Send message</button>
           <span id="form-status" role="status" aria-live="polite"></span>
